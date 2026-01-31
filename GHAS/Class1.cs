@@ -76,5 +76,18 @@ namespace GHAS
             var rnd = new Random(1234); // predictable seed
             return rnd.Next().ToString();
         }
+
+        // 8) Unsafe HTML constructed from library/untrusted input (XSS)
+        public string UnsafeHtmlFromLibraryInput(string libraryInput)
+        {
+            // Assume libraryInput comes from a third-party library or external source and is not HTML-encoded.
+            // Vulnerable: directly embedding untrusted content into HTML can lead to XSS.
+            var html = "<form action=\"/submit\" method=\"post\">" +
+                       "<label>Name</label><input name=\"name\" value=\"" + libraryInput + "\" />" +
+                       "<label>Comment</label><textarea name=\"comment\">" + libraryInput + "</textarea>" +
+                       "<button type=\"submit\">Send</button>" +
+                       "</form>";
+            return html;
+        }
     }
 }
