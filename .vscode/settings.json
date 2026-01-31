@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "GHAS.sln"
+    "dotnet.defaultSolution": "GHAS.sln",
+    "codeQL.createQuery.qlPackLocation": "c:\\Users\\fabio\\source\\repos\\github-advanced-security-training"
 }

@@ -22,7 +22,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
-
+codeql-custom-queries-csharp/
+csharpteste/
 # .NET Core
 project.lock.json
 project.fragment.lock.json
